@@ -472,12 +472,3 @@ You can also write prompts yourself. Concise prompts are usually preferred, for 
 *The man dances powerfully, with clear movements, full of energy.*
 
 and so on.
-
-# Cite
-
-    @article{zhang2025framepack,
-        title={Packing Input Frame Contexts in Next-Frame Prediction Models for Video Generation},
-        author={Lvmin Zhang and Maneesh Agrawala},
-        journal={Arxiv},
-        year={2025}
-    }
