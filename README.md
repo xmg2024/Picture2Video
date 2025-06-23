@@ -4,10 +4,6 @@
 
 # P2V
 
-Official implementation and desktop software for ["Packing Input Frame Context in Next-Frame Prediction Models for Video Generation"](https://lllyasviel.github.io/frame_pack_gitpage/).
-
-Links: [**Paper**](https://arxiv.org/abs/2504.12626), [**Project Page**](https://lllyasviel.github.io/frame_pack_gitpage/)
-
 P2V is a next-frame (next-frame-section) prediction neural network structure that generates videos progressively.
 
 P2V compresses input contexts to a constant length so that the generation workload is invariant to video length.
