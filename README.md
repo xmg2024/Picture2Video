@@ -2,27 +2,22 @@
     <img src="https://github.com/user-attachments/assets/2cc030b4-87e1-40a0-b5bf-1b7d6b62820b" width="300">
 </p>
 
-# FramePack
+# P2V
 
 Official implementation and desktop software for ["Packing Input Frame Context in Next-Frame Prediction Models for Video Generation"](https://lllyasviel.github.io/frame_pack_gitpage/).
 
 Links: [**Paper**](https://arxiv.org/abs/2504.12626), [**Project Page**](https://lllyasviel.github.io/frame_pack_gitpage/)
 
-FramePack is a next-frame (next-frame-section) prediction neural network structure that generates videos progressively. 
+P2V is a next-frame (next-frame-section) prediction neural network structure that generates videos progressively.
 
-FramePack compresses input contexts to a constant length so that the generation workload is invariant to video length.
+P2V compresses input contexts to a constant length so that the generation workload is invariant to video length.
 
-FramePack can process a very large number of frames with 13B models even on laptop GPUs.
+P2V can process a very large number of frames with 13B models even on laptop GPUs.
 
-FramePack can be trained with a much larger batch size, similar to the batch size for image diffusion training.
+P2V can be trained with a much larger batch size, similar to the batch size for image diffusion training.
 
 **Video diffusion, but feels like image diffusion.**
 
-# News
-
-**2025 May 03:** The FramePack-F1 is released. [Try it here.](https://github.com/lllyasviel/FramePack/discussions/459)
-
-Note that this GitHub repository is the only official FramePack website. We do not have any web services. All other websites are spam and fake, including but not limited to `framepack.co`, `frame_pack.co`, `framepack.net`, `frame_pack.net`, `framepack.ai`, `frame_pack.ai`, `framepack.pro`, `frame_pack.pro`, `framepack.cc`, `frame_pack.cc`,`framepackai.co`, `frame_pack_ai.co`, `framepackai.net`, `frame_pack_ai.net`, `framepackai.pro`, `frame_pack_ai.pro`, `framepackai.cc`, `frame_pack_ai.cc`, and so on. Again, they are all spam and fake. **Do not pay money or download files from any of those websites.**
 
 # Requirements
 
@@ -38,27 +33,15 @@ Requirements:
 
 To generate 1-minute video (60 seconds) at 30fps (1800 frames) using 13B model, the minimal required GPU memory is 6GB. (Yes 6 GB, not a typo. Laptop GPUs are okay.)
 
-About speed, on my RTX 4090 desktop it generates at a speed of 2.5 seconds/frame (unoptimized) or 1.5 seconds/frame (teacache). On my laptops like 3070ti laptop or 3060 laptop, it is about 4x to 8x slower. [Troubleshoot if your speed is much slower than this.](https://github.com/lllyasviel/FramePack/issues/151#issuecomment-2817054649)
+About speed, on my RTX 4090 desktop it generates at a speed of 2.5 seconds/frame (unoptimized) or 1.5 seconds/frame (teacache). On my laptops like 3070ti laptop or 3060 laptop, it is about 4x to 8x slower.
 
 In any case, you will directly see the generated frames since it is next-frame(-section) prediction. So you will get lots of visual feedback before the entire video is generated.
 
 # Installation
 
-**Windows**:
-
-[>>> Click Here to Download One-Click Package (CUDA 12.6 + Pytorch 2.6) <<<](https://github.com/lllyasviel/FramePack/releases/download/windows/framepack_cu126_torch26.7z)
-
-After you download, you uncompress, use `update.bat` to update, and use `run.bat` to run.
-
-Note that running `update.bat` is important, otherwise you may be using a previous version with potential bugs unfixed.
-
-![image](https://github.com/lllyasviel/stable-diffusion-webui-forge/assets/19834515/c49bd60d-82bd-4086-9859-88d472582b94)
-
-Note that the models will be downloaded automatically. You will download more than 30GB from HuggingFace.
-
 **Linux**:
 
-We recommend having an independent Python 3.10.
+You are recommended to have an independent Python 3.10.
 
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
     pip install -r requirements.txt
@@ -93,7 +76,7 @@ Note that the initial progress may be slower than later diffusion as the device 
 
 # Sanity Check
 
-Before trying your own inputs, we highly recommend going through the sanity check to find out if any hardware or software went wrong. 
+Before trying your own inputs, I highly recommend going through the sanity check to find out if any hardware or software went wrong.
 
 Next-frame-section prediction models are very sensitive to subtle differences in noise and hardware. Usually, people will get slightly different results on different devices, but the results should look overall similar. In some cases, if possible, you'll get exactly the same results.
 
@@ -199,7 +182,7 @@ About 30% users will get this (the other 70% will get other random results depen
 
 So you can see that teacache is not really lossless and sometimes can influence the result a lot.
 
-We recommend using teacache to try ideas and then using the full diffusion process to get high-quality results.
+You are recommended to use teacache to try ideas and then using the full diffusion process to get high-quality results.
 
 This recommendation also applies to sage-attention, bnb quant, gguf, etc., etc.
 
