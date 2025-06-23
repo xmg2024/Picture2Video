@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/2cc030b4-87e1-40a0-b5bf-1b7d6b62820b" width="300">
-</p>
-
 # P2V
 
 P2V is a next-frame (next-frame-section) prediction neural network structure that generates videos progressively.
