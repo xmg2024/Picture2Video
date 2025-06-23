@@ -52,10 +52,10 @@ tokenizer = LlamaTokenizerFast.from_pretrained("hunyuanvideo-community/HunyuanVi
 tokenizer_2 = CLIPTokenizer.from_pretrained("hunyuanvideo-community/HunyuanVideo", subfolder='tokenizer_2')
 vae = AutoencoderKLHunyuanVideo.from_pretrained("hunyuanvideo-community/HunyuanVideo", subfolder='vae', torch_dtype=torch.float16).cpu()
 
-feature_extractor = SiglipImageProcessor.from_pretrained("lllyasviel/flux_redux_bfl", subfolder='feature_extractor')
-image_encoder = SiglipVisionModel.from_pretrained("lllyasviel/flux_redux_bfl", subfolder='image_encoder', torch_dtype=torch.float16).cpu()
+feature_extractor = SiglipImageProcessor.from_pretrained("xmg2024/flux_redux_bfl", subfolder='feature_extractor')
+image_encoder = SiglipVisionModel.from_pretrained("xmg2024/flux_redux_bfl", subfolder='image_encoder', torch_dtype=torch.float16).cpu()
 
-transformer = HunyuanVideoTransformer3DModelPacked.from_pretrained('lllyasviel/FramePackI2V_HY', torch_dtype=torch.bfloat16).cpu()
+transformer = HunyuanVideoTransformer3DModelPacked.from_pretrained('xmg2024/I2V_HY', torch_dtype=torch.bfloat16).cpu()
 
 vae.eval()
 text_encoder.eval()
