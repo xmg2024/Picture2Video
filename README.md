@@ -446,4 +446,4 @@ You can also write prompts yourself. Concise prompts are usually preferred, for 
 
 *The man dances powerfully, with clear movements, full of energy.*
 
-and so on.
+And so on.
